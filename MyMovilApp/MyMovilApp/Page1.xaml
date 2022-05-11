@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyMovilApp.Page1">
+    <StackLayout>
+        <Label Text="Hola, Bienvenido/a" FontSize="36" HorizontalOptions="Center"/>
+        <Frame Margin="16" CornerRadius="10">
+            <StackLayout>
+                <Grid>
+                    <Label Text="Tu información" 
+                       FontSize="Large" 
+                       HorizontalOptions="Center"
+                       TextDecorations="Underline"/>
+                </Grid>
+                <Grid ColumnDefinitions="auto,*" RowDefinitions="auto,*">
+                    <Label Text="Nombre: "
+                           Grid.Row="1"
+                           x:Name="UserName"/>
+
+                    <Label Text="Apellido: "
+                           Grid.Row="2"
+                           x:Name="UserLastName"/>
+
+                    <Label Text="Correo: "
+                           Grid.Row="3"
+                           x:Name="Email"/>
+
+                    <Label Text="Telefono: "
+                           Grid.Row="4"
+                           x:Name="cellphone"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

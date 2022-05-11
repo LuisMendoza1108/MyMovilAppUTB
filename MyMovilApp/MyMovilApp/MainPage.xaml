@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyMovilApp.MainPage">
+
+    <StackLayout Background="White" 
+                 Margin="16">
+        <Label x:Name="lbl_principal"
+               Text="Bienvenido, complete el formulario"
+               FontSize="30"
+               HorizontalOptions="Center"/>
+
+        <ProgressBar x:Name="progress"
+                     Progress=".0"/>
+
+        <Grid>
+            <Label x:Name="lbl_progress"
+                   Text="0%"
+                   FontSize="Large"/>
+        </Grid>
+
+        <Frame Margin="16" BackgroundColor="White" CornerRadius="10">
+            <StackLayout>
+                <Entry x:Name="lbl_nombre"
+                       Placeholder="Ingresar nombre"
+                       FontSize="Medium"
+                       Completed="lbl_nombre_Completed"
+                       TextChanged="lbl_nombre_TextChanged"
+                       />
+
+                <Entry x:Name="lbl_apellido"
+                       Placeholder="Ingresar apellido"
+                       FontSize="Medium"
+                       Completed="lbl_apellido_Completed"
+                       TextChanged="lbl_apellido_TextChanged"
+                       />
+
+                <Entry x:Name="lbl_correo"
+                       Placeholder="Ingresar correo"
+                       FontSize="Medium"
+                       Completed="lbl_correo_Completed"
+                       TextChanged="lbl_correo_TextChanged"
+                       />
+
+                <Entry x:Name="lbl_telefono"
+                       Placeholder="Ingresar telefono"
+                       FontSize="Medium"
+                       Completed="lbl_telefono_Completed"
+                       TextChanged="lbl_telefono_TextChanged"
+                       />
+
+                <Grid ColumnDefinitions="auto,*">
+
+                    <CheckBox x:Name="cbox_terminos"
+                              IsChecked="False"
+                              CheckedChanged="cbox_terminos_CheckedChanged"
+                              Grid.Column="0"/>
+
+                    <Label Text="Acepto terminos y condiciones"
+                           Grid.Column="1"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+
+        <Button x:Name="btn_registrar"
+                Text="Registrar"
+                FontSize="Large"
+                Clicked="btn_registrar_Clicked"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                IsEnabled="False"/>
+    </StackLayout>
+</ContentPage>
